@@ -35,7 +35,7 @@ public class TodoListManagerActivity extends ActionBarActivity {
         setContentView(R.layout.activity_todo_list_manager);
 
         //init
-        list = (ListView) findViewById(R.id.todoListView);
+        list = (ListView) findViewById(R.id.lstTodoItems);
         todoItemList = new ArrayList<String>();
 
         //set array adapter for our listview
@@ -89,7 +89,7 @@ public class TodoListManagerActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         switch(id){
-            case R.id.menuAdd:
+            case R.id.menuItemAdd:
                 addListItem();
                 return true;
             default:
@@ -102,7 +102,7 @@ public class TodoListManagerActivity extends ActionBarActivity {
 
     public void addListItem(){
 
-        EditText edtItem = (EditText) findViewById(R.id.edtTxtItem);
+        EditText edtItem = (EditText) findViewById(R.id.edtNewItem);
         String item = edtItem.getText().toString();
 
         //add the new item to the list
@@ -110,6 +110,7 @@ public class TodoListManagerActivity extends ActionBarActivity {
 
         //notify the adapter
         todoListAdapter.notifyDataSetChanged();
+
 
     }
 

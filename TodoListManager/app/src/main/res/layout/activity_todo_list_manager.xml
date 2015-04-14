@@ -11,13 +11,14 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingBottom = "16dp"
-        android:id="@+id/edtTxtItem"
+        android:id="@+id/edtNewItem"
         />
 
     <ListView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/todoListView"
+        android:id="@+id/lstTodoItems"
+
         />
 
 </LinearLayout>
